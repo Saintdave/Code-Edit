@@ -1,0 +1,124 @@
+/*
+ * UdaraSelect CSS for UdaraSelect.js
+ *
+ * Author: Attamah Celestine .C.
+ * Date: 3/20/2020
+ * Modified date: 2/9/2021
+ *
+ */
+
+.rm-elem {
+    display: none;
+}
+
+.hide-elem {
+    visibility: hidden;
+}
+
+.ud-select {
+    position: relative;
+}
+
+.ud-select .select:focus {
+    outline: 1px solid rgb(199, 199, 199);
+}
+
+.ud-select .select {
+    position: relative;
+    display: table;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.ud-select .selected {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size: 1.0em;
+}
+
+.ud-select .select:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    border: 6px solid transparent;
+    border-color: dimgrey transparent transparent transparent;
+}
+
+.ud-select .select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -9.5px;
+    font-size: 1.2em;
+    color: dimgrey;
+}
+
+.ud-select .select-menu {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px grey;
+    z-index: 20;
+}
+
+.ud-select .select-menu.close {
+    display: none;
+}
+
+.ud-select .select-menu .search-input-wrapper {
+    padding: 4px;
+}
+
+.ud-select .select-menu .search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0px 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.ud-select .select-menu .option-list-wrapper {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.ud-select .select-menu .option-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4px;
+}
+
+.ud-select .select-menu .option-list .option {
+    padding: 8px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ud-select .select-menu .option-list .option .value {
+    font-size: 1.0em;
+}
+
+.ud-select .select-menu .option-list .option.active {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: lightgray;
+}
+
+.ud-select .select-menu .option-list .option:hover {
+    background-color: lightgray;
+}

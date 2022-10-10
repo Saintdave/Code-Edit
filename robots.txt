@@ -1,0 +1,4 @@
+# robots.txt for https://tronwage.org/
+
+User-agent: *
+Disallow: *

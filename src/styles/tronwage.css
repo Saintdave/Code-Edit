@@ -1,0 +1,1803 @@
+/**
+ * Tronwage stylesheet for all the views
+ */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4c4e50;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.remove-elem {
+    display: none;
+}
+
+.hide-elem {
+    visibility: hidden;
+}
+
+.cont-max-width {
+    max-width: 1300px;
+}
+
+.fill-win-height {
+    min-height: 100vh;
+}
+
+.main-header-menu-cont {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.main-header-menu-cont.dashboard {
+    position: fixed;
+}
+
+.main-header-menu-cont.dashboard .main-header-menu {
+    background-color: #317c88;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-header-menu {
+    margin: 0 auto;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main-header-menu .site-logo-cont {
+    float: left;
+    margin: 10px 0px;
+}
+
+.main-header-menu .site-logo-cont img {
+    height: 40px;
+    width: auto;
+}
+
+.main-header-menu .header-menu-group-1 {
+    float: right;
+}
+
+.main-header-menu .linked-wallet-cont {
+    float: left;
+    width: 180px;
+    margin: 15px 25px 0px 10px;
+    border-radius: 4px;
+    background-color: #40a3b3;
+    cursor: default;
+}
+
+.main-header-menu .menu-link-cont {
+    float: left;
+    margin: 10px 0px;
+}
+
+.main-header-menu .menu-link-cont .link {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.main-header-menu .menu-link-cont .link:hover {
+    color: #c8e2e6;
+}
+
+.main-header-menu .mobile-side-menu-btn {
+    display: none;
+    margin: 17px 5px;
+}
+
+.main-header-menu .mobile-side-menu-btn .menu-icon {
+    position: relative;
+    top: 2px;
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+
+#mobile-main-navigation-menu-backdrop.active {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: black;
+    z-index: 110;
+}
+
+#mobile-main-navigation-menu {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: -310px;
+    width: 300px;
+    height: calc(100% + 100px);
+    padding-top: 12px;
+    background-color: #3f919e;
+    box-shadow: -1px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    z-index: 120;
+}
+
+#mobile-main-navigation-menu.hide {
+    transform: translateX(0px);
+    transition: transform 0.3s ease-out;
+}
+
+#mobile-main-navigation-menu.show {
+    transform: translateX(-310px);
+    transition: transform 0.4s ease-out;
+}
+
+#mobile-main-navigation-menu .close-btn {
+    position: absolute;
+    right: 0px;
+    width: 72px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: unset;
+}
+
+#mobile-main-navigation-menu .close-icon {
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+
+#mobile-main-navigation-menu .linked-wallet-cont {
+    max-width: 220px;
+    margin: 100px 25px 0px 25px;
+    border-radius: 4px;
+    background-color: #40a3b3;
+    cursor: default;
+}
+
+#mobile-main-navigation-menu .linked-wallet-cont .icon-cont,
+.main-header-menu .linked-wallet-cont .icon-cont {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 35px;
+    max-width: 35px;
+}
+
+#mobile-main-navigation-menu .linked-wallet-cont .wallet-icon,
+.main-header-menu .linked-wallet-cont .wallet-icon {
+    float: left;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    fill-rule: evenodd;
+    fill: white;
+}
+
+#mobile-main-navigation-menu .linked-wallet-cont .wallet-address,
+.main-header-menu .linked-wallet-cont .wallet-address {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: lighter;
+    color: white;
+}
+
+#mobile-main-navigation-menu .menu-list-cont {
+    margin-top: 30px;
+}
+
+#mobile-main-navigation-menu .link-list,
+#side-nav-main-menu .link-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#mobile-main-navigation-menu .link-cont,
+#side-nav-main-menu .link-cont {
+    padding: 8px 25px;
+}
+
+#side-nav-main-menu .link:hover {
+    border-radius: 4px;
+    background-color: #3b8894;
+}
+
+#mobile-main-navigation-menu .link,
+#side-nav-main-menu .link {
+    display: table;
+    padding: 5px;
+}
+
+#mobile-main-navigation-menu .link.active,
+#side-nav-main-menu .link.active {
+    border-radius: 4px;
+    background-color: #317c88;
+}
+
+#mobile-main-navigation-menu .link .icon-cont,
+#side-nav-main-menu .link .icon-cont {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 50px;
+    max-width: 50px;
+}
+
+#mobile-main-navigation-menu .link .icon-cont > svg,
+#side-nav-main-menu .link .icon-cont > svg {
+    float: left;
+    width: 25px;
+    height: 25px;
+    fill-rule: evenodd;
+    fill: white;
+}
+
+#mobile-main-navigation-menu .link .item-cont,
+#side-nav-main-menu .link .item-cont {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 1.1em;
+    color: white;
+}
+
+#mobile-main-navigation-menu .join-us-cont {
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
+
+#mobile-main-navigation-menu .join-us-cont .title {
+    margin-top: 0px;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: white;
+}
+
+#mobile-main-navigation-menu .join-us-cont .social-media-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-main-navigation-menu .join-us-cont .social-media-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#mobile-main-navigation-menu .join-us-cont .social-media-list a {
+    text-decoration: none;
+}
+
+#mobile-main-navigation-menu .join-us-cont .social-media-list .icon {
+    font-size: 2.5em;
+    color: #c9e7ec;
+}
+
+#mobile-main-navigation-menu .join-us-cont .social-media-list .icon:hover {
+    color: white;
+}
+
+#notify-msg {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -125px;
+    padding: 15px;
+    border-radius: 4px;
+    opacity: 0;
+    background-color: white;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+    z-index: 110;
+}
+
+#notify-msg.show {
+    transform: translateY(70px);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+#notify-msg.hide {
+    pointer-events: none;
+    transform: translateY(0px);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+#notify-msg .msg-icon {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 40px;
+    max-width: 40px;
+}
+
+#notify-msg .msg-icon .check-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: #4caf8c;
+}
+
+#notify-msg .msg-icon .times-icon {
+    display: none;
+    width: 25px;
+    height: 25px;
+    fill: #ce4619;
+}
+
+#notify-msg.failed .msg-icon .check-icon {
+    display: none;
+}
+
+#notify-msg.failed .msg-icon .times-icon {
+    display: block;
+}
+
+#notify-msg .message {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 250px;
+    min-width: 180px;
+    line-height: 26px;
+    font-size: 1.0em;
+    color: #6d6d6d;
+}
+
+#dialog-backdrop {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: black;
+    z-index: 110;
+}
+
+#dialog-backdrop.active {
+    display: block;
+}
+
+#stake-confirm-dialog,
+#set-referral-dialog {
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    width: 400px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3);
+    z-index: 110;
+}
+
+#stake-confirm-dialog .header-cont,
+#set-referral-dialog .header-cont {
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#stake-confirm-dialog .header-cont .close-btn,
+#set-referral-dialog .header-cont .close-btn {
+    float: right;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: unset;
+}
+
+#stake-confirm-dialog .header-cont .close-icon,
+#set-referral-dialog .header-cont .close-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: #9a9a9a;
+}
+
+#stake-confirm-dialog .header-cont .close-btn:hover .close-icon,
+#set-referral-dialog .header-cont .close-btn:hover .close-icon {
+    fill: #e05b5b;
+}
+
+#stake-confirm-dialog .message-cont {
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    line-height: 27px;
+    font-size: 1.1em;
+    color: #5d5d5d;
+}
+
+#set-referral-dialog .content-cont {
+    padding-top: 10px;
+}
+
+#set-referral-dialog .message {
+    padding: 0px 15px;
+    padding-bottom: 20px;
+    line-height: 27px;
+    font-size: 1.1em;
+    color: #5d5d5d;
+}
+
+#set-referral-dialog .address-input-cont {
+    position: relative;
+    padding: 0px 15px;
+    padding-bottom: 40px;
+}
+
+#set-referral-dialog .user-referral-icon-cont {
+    position: absolute;
+    top: 7px;
+    right: 22px;
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+#set-referral-dialog .user-referral-icon {
+    width: 100%;
+    height: 100%;
+    fill-rule: evenodd;
+    fill: #9a9a9a;
+}
+
+#stake-confirm-dialog .message-cont .em {
+    font-weight: 500;
+}
+
+#stake-confirm-dialog .button-cont,
+#set-referral-dialog .button-cont {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#stake-confirm-dialog .button-cont .confirm-btn,
+#stake-confirm-dialog .button-cont .cancel-btn,
+#set-referral-dialog .button-cont .confirm-btn,
+#set-referral-dialog .button-cont .cancel-btn {
+    border: none;
+    outline: none;
+    width: 50%;
+    padding: 10px 0px;
+    border-radius: 4px;
+    font-size: 1.0em;
+    color: white;
+    background: linear-gradient(180deg, #3f919e,#317c88);
+}
+
+#set-referral-dialog .button-cont .confirm-btn {
+    max-width: 85px;
+}
+
+#stake-confirm-dialog .button-cont .confirm-btn,
+#set-referral-dialog .button-cont .cancel-btn {
+    margin-right: 15px;
+}
+
+#stake-confirm-dialog .button-cont .cancel-btn, 
+#set-referral-dialog .button-cont .confirm-btn {
+    margin-left: 15px;
+}
+
+#stake-confirm-dialog .button-cont .confirm-btn:hover,
+#stake-confirm-dialog .button-cont .cancel-btn:hover,
+#set-referral-dialog .button-cont .confirm-btn:hover,
+#set-referral-dialog .button-cont .cancel-btn:hover {
+    background: linear-gradient(180deg, #3f919e,#3f919e);
+}
+
+.page-upper-section {
+    height: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(270deg,#377d88,#3f919e);
+}
+
+.headline-bg-image {
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    width: 100%;
+    height: inherit;
+    background-image: url('../images/background/tronwage_upper_bg_img.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 700px;
+    z-index: 10;
+}
+
+.headline-bg-image-filter {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 20;
+}
+
+.headline-cont {
+    position: relative;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 180px;
+    box-sizing: border-box;
+    z-index: 30;
+}
+
+.headline-cont .headline {
+    max-width: 550px;
+    font-size: 3.0em;
+    font-weight: normal;
+    color: white;
+}
+
+.headline-cont .sub-headline {
+    max-width: 540px;
+    margin-bottom: 60px;
+    line-height: 34px;
+    font-size: 1.4em;
+    font-weight: normal;
+    color: white;
+}
+
+.headline-cont .sub-headline-stroke {
+    width: 180px;
+    height: 3px;
+    margin-top: 45.5px;
+    background-color: #73cdd2;
+}
+
+.headline-cont .view-contract-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 60px;
+    border-radius: 4px;
+    border: 2px solid #c2e7ed;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: white;
+    background-color: #4ba6b4;
+}
+
+.headline-cont .view-contract-link:hover {
+    background-color: #48a0ad;
+}
+
+.headline-stat-cont {
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.headline-stat-cont .total-stake-label,
+.headline-stat-cont .total-withdrawn-label {
+    float: left;
+    width: 50%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.headline-stat-cont .total-stake-label .label-cont,
+.headline-stat-cont .total-withdrawn-label .label-cont {
+    min-width: 120px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #3f919e;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.headline-stat-cont .total-stake-label .label-cont .content,
+.headline-stat-cont .total-withdrawn-label .label-cont .content {
+    font-size: 1.4em;
+    font-weight: normal;
+    font-weight: 500;
+    color: white;
+}
+
+.headline-stat-cont .total-stake-label .label-cont .title,
+.headline-stat-cont .total-withdrawn-label .label-cont .title {
+    font-size: 1.0em;
+    color: white;
+}
+
+.page-section-1,
+.page-section-3 {
+    background-color: #5198a2;
+}
+
+.page-section-2 {
+    background-color: #387e89;
+}
+
+.section-cont {
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-title {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 2.0em;
+    font-weight: normal;
+    color: #c5e6ea;
+}
+
+.page-section-1 .section-title {
+    text-align: center;
+    margin-left: 0px;
+}
+
+.page-section-2 .section-title {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.section-title-divider {
+    height: 4px;
+    width: 100%;
+    max-width: 120px;
+    background-color: #6db9c3;
+}
+
+.page-section-1 .section-title-divider {
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.page-section-2 .section-title-divider {
+    margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+.section-caption {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    padding: 0px 30px;
+    box-sizing: content-box;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: white;
+}
+
+.grid-list-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-section-1 .grid-list-cont .grid-list {
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+.page-section-2 .grid-list-cont .grid-list {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.why-us-list-cont {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 30px;
+}
+
+.why-us-list-cont .featured-img-cont {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.why-us-list-cont .featured-img-cont img {
+    width: 100%;
+    height: 100%;
+}
+
+.why-us-list-cont .heading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #c5e6ea;
+} 
+
+.why-us-list-cont .description {
+    line-height: 27px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.getting-started-cont {
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.getting-started-cont .label-cont {
+    display: table-cell;
+    vertical-align: top;
+    min-width: 80px;
+}
+
+.getting-started-cont .numbering-cont {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.getting-started-cont .numbering-cont .showdow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 80%;
+    border-radius: 4px;
+    background-color: #82c9d4;
+}
+
+.getting-started-cont .numbering-cont .number {
+    position: absolute;
+    top: 20%;
+    right: 0px;
+    width: 80%;
+    height: 80%;
+    border-radius: 4px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 64px;
+    color: #b3d7dc;
+    background-color: #449ead;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.getting-started-cont .instruction-cont {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0px 20px 60px 20px;
+    width: 100%;
+}
+
+.getting-started-cont .instruction-cont .title {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #c9e6ea;
+}
+
+.getting-started-cont .instruction-cont .content {
+    line-height: 27px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.getting-started-cont .instruction-cont .content a {
+    text-decoration: none;
+    line-height: 27px;
+    font-size: 1.1em;
+    color: #9cced6;
+}
+
+.getting-started-cont .instruction-cont .content a:hover {
+    text-decoration: underline;
+}
+
+.page-section-3 .section-title-divider {
+    margin-bottom: 50px;
+}
+
+.about-img-tw-cont {
+    display: table;
+}
+
+.about-img-tw-cont .img-cont,
+.about-img-tw-cont .write-up-cont {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 0px 20px;
+}
+
+.about-img-tw-cont .img-cont {
+    padding-right: 50px;
+}
+
+.about-img-tw-cont img {
+    width: 100%;
+    height: auto;
+}
+
+.about-img-tw-cont .about-tw {
+    line-height: 30px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.page-footer-hr {
+    height: 0px;
+    border-top: 1px solid #407d85;
+    border-bottom: 1px solid #407d85;
+}
+
+.page-footer {
+    padding: 30px 0px;
+    background-color: #235258;
+}
+
+.page-footer-cont {
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.page-footer-cont .left-section {
+    margin-top: 7px;
+    float: left;
+    font-size: 1.0em;
+    color: #b3e2e8;
+}
+
+.page-footer-cont .right-section {
+    float: right;
+}
+
+.page-footer-cont .social-media-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer-cont .social-media-list > li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.page-footer-cont .social-media-list > li:last-child {
+    margin-right: 0px;
+}
+
+.page-footer-cont .social-media-list > li a .icon {
+    color: #9bd4dc;
+}
+
+.page-footer-cont .social-media-list > li a:hover .icon {
+    color: #cdecf0;
+}
+
+.page-footer-cont .social-media-list .icon {
+    font-size: 2.5em;
+}
+
+#dashboard-section-cont {
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+#side-nav-main-menu {
+    position: fixed;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    padding-top: 160px;
+    background-color: #3f919e;
+    box-shadow: 4px 0px 4px 1px rgb(0, 0, 0, 0.2);
+    z-index: 90;
+}
+
+#account-view,
+#stake-view {
+    padding: 70px 20px 50px 320px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-section-title {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-weight: normal;
+    font-size: 1.3em;
+    color: #6d6d6d;
+}
+
+#account-view .account-cont,
+#stake-view .stake-cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+#account-view .account-cont .account-info-cont,
+#account-view .account-cont .deposit-withdraw-cont {
+    padding: 20px 30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+#account-view .account-cont .account-info-cont,
+#account-view .account-cont .deposit-withdraw-cont {
+    width: 50%;
+}
+
+.referral-link-cont,
+.referral-id-cont,
+.referred-user-cont {
+    display: table;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+.referral-link-cont .title,
+.referral-id-cont .title,
+.referred-user-cont .title {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 120px;
+    max-width: 120px;
+    font-size: 1.1em;
+    color: #757575;
+}
+
+.referral-link-cont .link,
+.referral-id-cont .id {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 1.1em;
+    color: #757575;
+}
+
+.referral-link-cont .copy-btn-cont,
+.referral-id-cont .copy-btn-cont {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+.referral-link-cont .copy-btn,
+.referral-id-cont .copy-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: unset;
+}
+
+.referral-link-cont .copy-btn .copy-icon,
+.referral-id-cont .copy-btn .copy-icon {    
+    fill: #46a0af;
+}
+
+.referral-link-cont .copy-btn:hover .copy-icon,
+.referral-id-cont .copy-btn:hover .copy-icon {
+    fill: #3f919e;
+}
+
+.referral-link-cont .copy-icon,
+.referral-id-cont .copy-icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    fill-rule: evenodd;
+}
+
+.referred-user-cont .data {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding-right: 7px;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+.account-info-cont .balance-info-cont {
+    display: table;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.account-info-cont .balance-info-cont .account-balance,
+.account-info-cont .balance-info-cont .remaining-balance,
+.stake-info-cont .amount-profit-cont .amount-staked-cont,
+.stake-info-cont .amount-profit-cont .staked-profit-cont {
+    display: table-cell;
+    width: 50%;
+}
+
+.account-info-cont .balance-info-cont .crypto-amount,
+.stake-info-cont .amount-profit-cont .crypto-amount {
+    margin-bottom: 2px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #676767;
+}
+
+.account-info-cont .balance-info-cont .fiat-amount,
+.stake-info-cont .amount-profit-cont .fiat-amount {
+    margin-bottom: 4px;
+    font-size: 1.0em;
+    color: #7b7b7b;
+}
+
+.account-info-cont .balance-info-cont .title,
+.stake-info-cont .amount-profit-cont .title {
+    font-size: 1.0em;
+    color: #676767;
+}
+
+.deposit-withdraw-btn-cont {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.deposit-withdraw-btn-cont .deposit-btn,
+.deposit-withdraw-btn-cont .withdraw-btn {
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin-right: 20px;
+    font-size: 1.0em;
+    color: white;
+    background: linear-gradient(180deg, #3f919e,#317c88);
+}
+
+.deposit-withdraw-btn-cont .deposit-btn:hover,
+.deposit-withdraw-btn-cont .withdraw-btn:hover,
+.stake-amount-btn-cont .stake-amount-btn:hover {
+    background: linear-gradient(180deg, #3f919e,#3f919e);
+}
+
+.deposit-withdraw-cont .navigate-back-btn-cont,
+.staking-cont .navigate-back-btn-cont {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.deposit-withdraw-cont .navigate-back-btn,
+.staking-cont .navigate-back-btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px 10px 0px;
+    background-color: unset;
+}
+
+.deposit-withdraw-cont .navigate-back-icon,
+.staking-cont .navigate-back-icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    fill: dimgray;
+}
+
+#deposit-withdraw-checkbox-toggle {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.deposit-withdraw-cont .tab-btn-cont {
+    margin-bottom: 40px;
+}
+
+.deposit-withdraw-cont .tab-1,
+.deposit-withdraw-cont .tab-2 {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 1.0em;
+    color: #3f919e;
+    background-color: unset;
+}
+
+.deposit-withdraw-cont .tab-1.active,
+.deposit-withdraw-cont .tab-2.active {
+    color: white;
+    background-color: #3f919e;
+}
+
+.deposit-withdraw-cont .amount-input-cont,
+.staking-cont .amount-input-cont {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#wd-amount-input,
+#stake-amount-input,
+#referred-address-input {
+    height: 40px;
+    width: 100%;
+    padding: 0px 15px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.1em;
+    color: dimgray;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+}
+
+#wd-amount-input:focus,
+#stake-amount-input:focus,
+#referred-address-input:focus {
+    outline: none;
+    border: 1px solid #29a7ce;
+    box-shadow: 0px 1px 6px 0px rgba(124, 185, 255, 0.8);
+}
+
+.deposit-withdraw-cont .amount-input-cont .currency,
+.staking-cont .amount-input-cont .currency {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    pointer-events: none;
+    font-size: 1.0em;
+    color: dimgray;
+    font-weight: 500;
+}
+
+.deposit-withdraw-cont .amount-select-percent-cont,
+.staking-cont .amount-select-percent-cont {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.deposit-withdraw-cont .select-percent,
+.staking-cont .select-percent {
+    display: table-cell;
+    width: 25%;
+    padding: 0px 5px;
+    cursor: default;
+}
+
+.deposit-withdraw-cont .select-percent .indicator,
+.staking-cont .select-percent .indicator {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 5px;
+    background-color: #afafaf;
+}
+
+.deposit-withdraw-cont .select-1 .select-percent:nth-child(1) .indicator,
+.deposit-withdraw-cont .select-2 .select-percent:nth-child(1) .indicator,
+.deposit-withdraw-cont .select-2 .select-percent:nth-child(2) .indicator,
+.deposit-withdraw-cont .select-3 .select-percent:nth-child(1) .indicator,
+.deposit-withdraw-cont .select-3 .select-percent:nth-child(2) .indicator,
+.deposit-withdraw-cont .select-3 .select-percent:nth-child(3) .indicator,
+.deposit-withdraw-cont .select-4 .select-percent:nth-child(1) .indicator,
+.deposit-withdraw-cont .select-4 .select-percent:nth-child(2) .indicator,
+.deposit-withdraw-cont .select-4 .select-percent:nth-child(3) .indicator,
+.deposit-withdraw-cont .select-4 .select-percent:nth-child(4) .indicator {
+    background-color: #56adbb;
+}
+
+.deposit-withdraw-cont .select-percent .percent-symbol,
+.staking-cont .select-percent .percent-symbol {
+    text-align: center;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.deposit-withdraw-cont .wallet-balance-info-cont,
+.deposit-withdraw-cont .account-balance-info-cont,
+.staking-cont .balance-info-cont {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.deposit-withdraw-cont .account-balance-info-cont {
+    display: none;
+}
+
+.deposit-withdraw-cont .wallet-balance-info-cont .symbol,
+.deposit-withdraw-cont .account-balance-info-cont .symbol,
+.staking-cont .balance-info-cont .symbol {
+    float: left;
+    padding-left: 5px;
+    font-size: 0.85em;
+    color: gray;
+}
+
+.deposit-withdraw-cont .wallet-balance-info-cont .amount,
+.deposit-withdraw-cont .account-balance-info-cont .amount,
+.staking-cont .balance-info-cont .amount {
+    float: right;
+    padding-right: 5px;
+    font-size: 0.85em;
+    color: gray;
+}
+
+.deposit-withdraw-cont .execute-btn,
+.staking-cont .stake-btn {
+    border: none;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 4px;
+    margin-right: 20px;
+    font-size: 1.0em;
+    color: white;
+    background: linear-gradient(180deg, #3f919e,#317c88); 
+}
+
+.deposit-withdraw-cont .execute-btn:hover,
+.staking-cont .stake-btn:hover {
+    background: linear-gradient(180deg, #3f919e,#3f919e);
+}
+
+.deposit-withdraw-cont .execute-btn:disabled:hover,
+.staking-cont .stake-btn:disabled:hover {
+    background: linear-gradient(180deg, #3f919e,#317c88);
+}
+
+.deposit-withdraw-cont .execute-btn .deposit-title,
+.deposit-withdraw-cont .execute-btn .withdraw-title {
+    font-size: 1.0em;
+    color: white;
+}
+
+.deposit-withdraw-cont .deposit-charge-percent,
+.deposit-withdraw-cont .withdraw-charge-percent,
+.staking-cont .charge-percent {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    font-size: 0.85em;
+    color: gray;
+}
+
+.deposit-withdraw-cont .withdraw-charge-percent,
+.deposit-withdraw-cont .execute-btn .withdraw-title {
+    display: none;
+}
+
+#deposit-withdraw-checkbox-toggle:checked ~ .wallet-balance-info-cont,
+#deposit-withdraw-checkbox-toggle:checked ~ .deposit-charge-percent,
+#deposit-withdraw-checkbox-toggle:checked ~ .execute-btn .deposit-title {
+    display: none;
+}
+
+#deposit-withdraw-checkbox-toggle:checked ~ .account-balance-info-cont,
+#deposit-withdraw-checkbox-toggle:checked ~ .withdraw-charge-percent,
+#deposit-withdraw-checkbox-toggle:checked ~ .execute-btn .withdraw-title {
+    display: block;
+}
+
+#stake-view .stake-cont .stake-info-cont,
+#stake-view .stake-cont .staking-cont {
+    width: 50%;
+    padding: 20px 30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.stake-info-cont .amount-profit-cont {
+    display: table;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.stake-info-cont .amount-profit-cont .amount-staked-cont,
+.stake-info-cont .amount-profit-cont .staked-profit-cont {
+    display: table-cell;
+    width: 50%;
+}
+
+.stake-info-cont .stake-count-cont {
+    margin-bottom: 40px;
+}
+
+.stake-info-cont .stake-count-cont .stake-count {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #676767;
+}
+
+.stake-info-cont .stake-count-cont .title {
+    font-size: 1.0em;
+    color: #676767;
+}
+
+.stake-amount-btn-cont {
+    display: none;
+    margin-bottom: 40px;
+}
+
+.stake-amount-btn-cont .stake-amount-btn {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-size: 1.0em;
+    color: white;
+    background: linear-gradient(180deg, #3f919e,#317c88);
+}
+
+.staking-cont .duration-capitalisation-cont {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.staking-cont .durection-select-cont {
+    display: table-cell;
+    width: 100%;
+}
+
+.staking-cont .capitalisation-select-cont {
+    display: table-cell;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.staking-cont .durection-select-cont {
+    padding-right: 10px;
+}
+
+.staking-cont .durection-select-cont .input-label,
+.staking-cont .capitalisation-select-cont .input-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.85em;
+    color: gray;
+}
+
+.duration-capitalisation-cont .select {
+    border-radius: 4px;
+}
+
+.duration-capitalisation-cont .select:after {
+    border-color: #868686 transparent transparent transparent;
+}
+
+.duration-capitalisation-cont .select:focus {
+    outline: none;
+    border: 1px solid #29a7ce;
+    box-shadow: 0px 1px 6px 0px rgba(124, 185, 255, 0.8);
+}
+
+.duration-capitalisation-cont .selected,
+.duration-capitalisation-cont .select-menu .option-list .option .value {
+    font-size: 1.1em;
+}
+
+.duration-capitalisation-cont .select-menu .option-list .option:hover {
+    background-color: #d2edf1;
+}
+
+.duration-capitalisation-cont .select-menu .option-list .option.active {
+    background-color: #d2edf1;
+}
+
+.staking-cont .select-1 .select-percent:nth-child(1) .indicator,
+.staking-cont .select-2 .select-percent:nth-child(1) .indicator,
+.staking-cont .select-2 .select-percent:nth-child(2) .indicator,
+.staking-cont .select-3 .select-percent:nth-child(1) .indicator,
+.staking-cont .select-3 .select-percent:nth-child(2) .indicator,
+.staking-cont .select-3 .select-percent:nth-child(3) .indicator,
+.staking-cont .select-4 .select-percent:nth-child(1) .indicator,
+.staking-cont .select-4 .select-percent:nth-child(2) .indicator,
+.staking-cont .select-4 .select-percent:nth-child(3) .indicator,
+.staking-cont .select-4 .select-percent:nth-child(4) .indicator {
+    background-color: #56adbb;
+}
+
+.active-stake {
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+#no-active-stake-notice {
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    color: gray;
+    background-color: #e2e2e2;
+}
+
+.active-stake .expand-stake-info {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.active-stake .expand-stake-info:checked ~ .stake-body-cont {
+    height: 103px;
+    transition: height 0.2s ease-in;
+}
+
+.active-stake .stake-header-cont {
+    display: table;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.active-stake .stake-header-cont .expand-btn-cont {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.active-stake .stake-header-cont .expand-btn {
+    display: block;
+    padding: 10px;
+}
+
+.active-stake .stake-header-cont .expand-btn .down-arrow-icon,
+.active-stake .stake-header-cont .expand-btn .up-arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: gray;
+}
+
+.active-stake .stake-header-cont .expand-btn .down-arrow-icon:hover,
+.active-stake .stake-header-cont .expand-btn .up-arrow-icon:hover {
+    fill: #636363;
+}
+
+.active-stake .stake-header-cont .expand-btn .up-arrow-icon {
+    display: none;
+}
+
+.active-stake .expand-stake-info:checked ~ .stake-header-cont .expand-btn .down-arrow-icon {
+    display: none;
+}
+
+.active-stake .expand-stake-info:checked ~ .stake-header-cont .expand-btn .up-arrow-icon {
+    display: unset;
+}
+
+.active-stake .stake-header-cont .amount-cont,
+.active-stake .stake-header-cont .duration-cont,
+.active-stake .stake-header-cont .remaining-time-cont,
+.active-stake .stake-header-cont .profit-cont {
+    display: table-cell;
+    vertical-align: middle;
+    width: 25%;
+}
+
+.active-stake .stake-header-cont .amount-cont .data,
+.active-stake .stake-header-cont .duration-cont .data,
+.active-stake .stake-header-cont .remaining-time-cont .data,
+.active-stake .stake-header-cont .profit-cont .data,
+.active-stake .stake-body-cont .stake-date-cont .data,
+.active-stake .stake-body-cont .due-date-cont .data, 
+.active-stake .stake-body-cont .stake-profit-cont .data, 
+.active-stake .stake-body-cont .duration-cont .data, 
+.active-stake .stake-body-cont .remaining-time-cont .data {
+    margin-bottom: 4px;
+    font-size: 1.0em;
+    font-weight: 500;
+}
+
+.active-stake .stake-header-cont .amount-cont .title,
+.active-stake .stake-header-cont .duration-cont .title,
+.active-stake .stake-header-cont .remaining-time-cont .title,
+.active-stake .stake-header-cont .profit-cont .title,
+.active-stake .stake-body-cont .stake-date-cont .title,
+.active-stake .stake-body-cont .due-date-cont .title, 
+.active-stake .stake-body-cont .stake-profit-cont .title, 
+.active-stake .stake-body-cont .duration-cont .title, 
+.active-stake .stake-body-cont .remaining-time-cont .title {
+    font-size: 0.9em;
+    color: dimgrey;
+}
+
+.active-stake .stake-header-cont .stake-claim-btn-cont {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.active-stake .stake-header-cont .stake-claim-btn {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #5ba9b5;
+    cursor: default;
+}
+
+.claim-stake-profit-progress-fill {
+    position: absolute;
+    height: inherit;
+    background-color: #34808c;
+}
+
+.claim-stake-profit-count-down {
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    margin-top: -7px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.active-stake .stake-body-cont {
+    height: 0px;
+    transition: height 0.2s ease-in;
+    overflow: hidden;
+}
+
+.active-stake .stake-body-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 40px);
+    padding: 15px 10px;
+    min-height: 63px;
+    background-color: #eaeaea;
+}
+
+.active-stake .stake-body-cont .stake-date-cont,
+.active-stake .stake-body-cont .due-date-cont,
+.active-stake .stake-body-cont .stake-profit-cont,
+.active-stake .stake-body-cont .duration-cont,
+.active-stake .stake-body-cont .remaining-time-cont {
+    width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.active-stake .stake-body-cont .duration-cont,
+.active-stake .stake-body-cont .remaining-time-cont {
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .headline-bg-image-filter {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        background-image: linear-gradient(
+            180deg, 
+            rgba(58, 133, 145, 0), 
+            rgba(58, 133, 145, 0.5), 
+            rgba(58, 133, 145, 0.7)
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 20;
+    }
+}
+
+/*******Tronwage mobile view******/
+@media only screen and (max-width: 700px) {
+    .main-header-menu .menu-link-cont,
+    #side-nav-main-menu,
+    .main-header-menu .linked-wallet-cont,
+    .active-stake .stake-header-cont .duration-cont,
+    .active-stake .stake-header-cont .remaining-time-cont {
+        display: none;
+    }
+
+    .main-header-menu .mobile-side-menu-btn {
+        display: unset;
+        float: right;
+    }
+
+    #mobile-main-navigation-menu-backdrop.active {
+        display: block;
+    }
+
+    #mobile-main-navigation-menu {
+        display: block;
+    }
+
+    #stake-confirm-dialog,
+    #set-referral-dialog {
+        left: 0%;
+        width: calc(100% - 30px);
+        margin-left: 15px;
+    }
+
+    .headline-cont {
+        padding-top: 100px;
+    }
+
+    .headline-cont .headline {
+        font-size: 2.6em;
+    }
+
+    .headline-cont .sub-headline {
+        margin-bottom: 40px;
+        font-size: 1.3em;
+    }
+
+    .headline-cont .view-contract-link {
+        padding: 8px 50px;
+        font-size: 1.2em;
+    }
+
+    .headline-stat-cont {
+        bottom: 20px;
+        left: 50%;
+        right: unset;
+        margin-left: -170px;
+    }
+
+    .headline-stat-cont .total-stake-label, 
+    .headline-stat-cont .total-withdrawn-label {
+        padding: 10px 15px;
+    }
+
+    .headline-stat-cont .total-stake-label .label-cont .content, 
+    .headline-stat-cont .total-withdrawn-label .label-cont .content {
+        font-size: 1.2em;
+    }
+
+    .headline-stat-cont .total-stake-label .label-cont .title, 
+    .headline-stat-cont .total-withdrawn-label .label-cont .title {
+        font-size: 0.9em;
+    }
+
+    .headline-bg-image {
+        top: 10%;
+        left: 0%;
+        margin-left: 0px;
+    }
+
+    .page-section-1 .grid-list-cont .grid-list,
+    .page-section-2 .grid-list-cont .grid-list {
+        width: 100%;
+    }
+
+    .section-caption {
+        max-width: 450px;
+    }
+
+    .getting-started-cont .label-cont,
+    .getting-started-cont .numbering-cont {
+        min-width: 60px;
+    }
+
+    .getting-started-cont .numbering-cont {
+        height: 60px;
+    }
+
+    .getting-started-cont .numbering-cont .number {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .about-img-tw-cont {
+        display: block;
+    }
+
+    .about-img-tw-cont .img-cont {
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .about-img-tw-cont .img-cont, 
+    .about-img-tw-cont .write-up-cont {
+        display: block;
+        width: unset;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .about-img-tw-cont .about-tw {
+        text-align: justify;
+    }
+
+    #dashboard-section-cont {
+        box-shadow: unset;
+    }
+
+    .deposit-withdraw-cont .navigate-back-btn-cont,
+    .staking-cont .navigate-back-btn-cont,
+    .deposit-withdraw-btn-cont,
+    .stake-amount-btn-cont,
+    .active-stake .stake-body-cont .duration-cont, 
+    .active-stake .stake-body-cont .remaining-time-cont {
+        display: block;
+    }
+
+    #account-view,
+    #stake-view {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #account-view .account-cont .account-info-cont,
+    #stake-view .stake-cont .stake-info-cont {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    #account-view .account-cont .deposit-withdraw-cont,
+    #stake-view .stake-cont .staking-cont {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;
+        background-color: white;
+        box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s linear;
+        z-index: 50;
+    }
+
+    #account-view .account-cont .deposit-withdraw-cont.show, 
+    #stake-view .stake-cont .staking-cont.show {
+        transform: translateX(0%);
+        transition: transform 0.4s linear;
+    }
+
+    .active-stake .expand-stake-info:checked ~ .stake-body-cont {
+        height: 170px;
+    }
+
+    .active-stake .stake-header-cont .amount-cont,
+    .active-stake .stake-header-cont .profit-cont {
+        width: 50%;
+    }
+
+    .active-stake .stake-body-cont .stake-date-cont, 
+    .active-stake .stake-body-cont .due-date-cont, 
+    .active-stake .stake-body-cont .stake-profit-cont, 
+    .active-stake .stake-body-cont .duration-cont, 
+    .active-stake .stake-body-cont .remaining-time-cont {
+        width: 33.3%
+    }
+
+    .page-footer-cont .social-media-list > li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .page-footer-cont .social-media-list .icon {
+        font-size: 2.0em;
+    }
+}

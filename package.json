@@ -1,0 +1,32 @@
+{
+  "name": "tronwage",
+  "version": "1.0.0",
+  "description": "Decentralized community funded project which is powered by the Tron Blockchain",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocest/tronwage.git"
+  },
+  "author": "tronwage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cocest/tronwage/issues"
+  },
+  "homepage": "https://github.com/cocest/tronwage#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "mysql": "^2.18.1",
+    "trongrid": "^1.2.6",
+    "tronweb": "^3.2.6",
+    "utf-8-validate": "^5.0.2"
+  }
+}

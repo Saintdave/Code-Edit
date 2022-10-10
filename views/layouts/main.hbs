@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tronmint - Homepage</title>
+    <link rel="icon" type="image/png" href="./icons/favicon_1_2.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./icons/favicon_2_2.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./icons/favicon_3_2.png" sizes="120x120">
+    <meta name="description" content="Tronmint is an automated and secured staking platform powered by Tron blockchain technology, trusted by the community around the world.">
+    <meta name="keywords" content="Tron staking, cryptocurrency, investment, funds, business">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+    <link type="text/css" href="./js/udara_select/UdaraSelect.css" rel="stylesheet">
+    <link type="text/css" href="./styles/tronwage.css" rel="stylesheet">
+    <link type="text/css" href="./fonts/fontawesome/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/visionmedia/page.js"></script>
+    <script type="text/javascript" src="./js/udara_select/UdaraSelect.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/tronwage.js"></script>
+    <style type="text/css">
+        .page-loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .loading-anim-cont {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        /***tronwage loading animation***/
+        /**
+        * HTML structure:
+        *   <div class="tronwage-loading-anim">
+        *       <div class="block-link"></div>
+        *       <div class="block-1"></div>
+        *       <div class="block-2"></div>
+        *       <div class="block-3"></div>
+        *       <div class="block-4"></div>
+        *       <div class="moving-block"></div>
+        *   </div>
+        */
+        .tronwage-loading-anim {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+        .tronwage-loading-anim .block-link {
+            position: absolute;
+            top: 12.5%;
+            left: 12.5%;
+            width: 75%;
+            height: 75%;
+            box-sizing: border-box;
+            border: 2px solid #387e89;
+            z-index: 10;
+        }
+
+        .tronwage-loading-anim .block-1,
+        .tronwage-loading-anim .block-2,
+        .tronwage-loading-anim .block-3,
+        .tronwage-loading-anim .block-4 {
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            background-color:#387e89;
+            z-index: 20;
+        }
+
+        .tronwage-loading-anim .block-1 {
+            top: 0%;
+            left: 0%;
+            animation: block-anim-1 1.5s linear infinite;
+        }
+
+        .tronwage-loading-anim .block-2 {
+            top: 0%;
+            right: 0%;
+            animation: block-anim-2 1.5s linear infinite;
+        }
+
+        .tronwage-loading-anim .block-3 {
+            right: 0%;
+            bottom: 0%;
+            animation: block-anim-3 1.5s linear infinite;
+        }
+
+        .tronwage-loading-anim .block-4 {
+            left: 0%;
+            bottom: 0%;
+            animation: block-anim-4 1.5s linear infinite;
+        }
+
+        .tronwage-loading-anim .moving-block {
+            position: absolute;
+            width: 40%;
+            height: 40%;
+            transform: translate(-20%, -20%);
+            border: 2px solid #387e89;
+            z-index: 30;
+            animation: moving-block-anim 1.5s linear infinite;
+        }
+
+        @keyframes block-anim-1 {
+            0% { transform: scale(1); }
+            6.25% { transform: scale(1.3); }
+            12.5% { transform: scale(1); }
+        }
+
+        @keyframes block-anim-2 {
+            25% { transform: scale(1); }
+            31.25% { transform: scale(1.3); }
+            37.5% { transform: scale(1); }
+        }
+
+        @keyframes block-anim-3 {
+            50% { transform: scale(1); }
+            56.25% { transform: scale(1.3); }
+            62.5% { transform: scale(1); }
+        }
+
+        @keyframes block-anim-4 {
+            75% { transform: scale(1); }
+            81.25% { transform: scale(1.3); }
+            87.5% { transform: scale(1); }
+        }
+
+        @keyframes moving-block-anim {
+            0% { transform: translate(-20%, -20%) }
+            12.5% { transform: translate(-20%, -20%) }
+
+            25% { transform: translate(120%, -20%) }
+            37.5% { transform: translate(120%, -20%) }
+
+            50% { transform: translate(120%, 120%) }
+            62.5% { transform: translate(120%, 120%) }
+
+            75% { transform: translate(-20%, 120%) }
+            87.5% { transform: translate(-20%, 120%) }
+        }
+        /***tronwage loading animation end***/
+
+    </style>
+    <script type="text/javascript">
+
+        let min_load_play_time = 3000; // 3 seconds
+        let load_start_time = Date.now();
+
+        // remove load or splash screen
+        function removeLoadScreen() {
+            let load_end_time = Date.now();
+
+            // check if animation should be played longer
+            if ((load_end_time - load_start_time) < min_load_play_time) {
+                setTimeout(() => {
+                    document.querySelector('.page-loading').setAttribute("class", "remove-elem");
+                    document.querySelector('.main-page-cont').removeAttribute("style");
+
+                }, min_load_play_time);
+
+            } else {
+                document.querySelector('.page-loading').setAttribute("class", "remove-elem");
+                document.querySelector('.main-page-cont').removeAttribute("style");
+            }
+        }
+
+        // called after a page is fully loaded
+        window.addEventListener('load', (e) => {
+            removeLoadScreen();
+        }, false);
+
+        // reset scroll position of the page
+        window.addEventListener('beforeunload', (e) => {
+            window.scrollTo(0, 0);
+        }, false);
+
+    </script>
+</head>
+
+<body>
+    <div class="page-loading">
+        <div class="loading-anim-cont">
+            <div class="tronwage-loading-anim">
+                <div class="block-link"></div>
+                <div class="block-1"></div>
+                <div class="block-2"></div>
+                <div class="block-3"></div>
+                <div class="block-4"></div>
+                <div class="moving-block"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-page-cont" style="display: none;">
+        {{{body}}}
+    </div>
+</body>
+
+</html>

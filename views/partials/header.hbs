@@ -1,0 +1,139 @@
+<div class="main-header-menu-cont">
+    <div class="main-header-menu cont-max-width">
+        <nav>
+            <div class="site-logo-cont">
+                <a href="/">
+                    <img src="./icons/tronmint_logo_w_2(2).png" alt="tronmint">
+                </a>
+            </div>
+            <div class="header-menu-group-1">
+                <div class="linked-wallet-cont">
+                    <div class="icon-cont">
+                        <svg class="wallet-icon">
+                            <use xlink:href="#wallet-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="wallet-address">Wallet not linked</div>
+                </div>
+                <div id="home-nav-menu" class="menu-link-cont">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="/account">Dashboard</a>
+                </div>
+                <div class="mobile-side-menu-btn">
+                    <svg class="menu-icon">
+                        <use xlink:href="#mobile-menu-icon"></use>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div id="mobile-main-navigation-menu-backdrop"></div>
+<div id="mobile-main-navigation-menu" class="hide">
+    <button class="close-btn">
+        <svg class="close-icon">
+            <use xlink:href="#close-icon"></use>
+        </svg>
+    </button>
+    <div class="linked-wallet-cont">
+        <div class="icon-cont">
+            <svg class="wallet-icon">
+                <use xlink:href="#wallet-icon"></use>
+            </svg>
+        </div>
+        <div class="wallet-address">Wallet not linked</div>
+    </div>
+    <div class="menu-list-cont">
+        <ul class="link-list">
+            <li class="link-cont">
+                <a id="home-mob-link" class="link" href="/">
+                    <div class="icon-cont">
+                        <svg class="home-icon">
+                            <use xlink:href="#home-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="item-cont">Home</div>
+                </a>
+            </li>
+            <li class="link-cont">
+                <a id="account-mob-link" class="link" href="/account">
+                    <div class="icon-cont">
+                        <svg class="user-account-icon">
+                            <use xlink:href="#user-account-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="item-cont">Account</div>
+                </a>
+            </li>
+            <li class="link-cont">
+                <a id="stake-mob-link" class="link" href="/stake">
+                    <div class="icon-cont">
+                        <svg class="crypto-stake-icon">
+                            <use xlink:href="#crypto-stake-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="item-cont">Stake</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="join-us-cont">
+        <h2 class="title">Connect with us</h2>
+        <ul class="social-media-list">
+            <li><a href="https://t.me/tronwage"><i class="icon fab fa-telegram"></i></a></li>
+            <li><a href="https://twitter.com/Tronwage1"><i class="icon fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div id="notify-msg" class="hide">
+    <div class="msg-icon">
+        <svg class="check-icon">
+            <use xlink:href="#check-icon"></use>
+        </svg>
+        <svg class="times-icon">
+            <use xlink:href="#times-icon"></use>
+        </svg>
+    </div>
+    <div class="message">Deposit is successfull.</div>
+</div>
+<div id="dialog-backdrop"></div>
+<div id="set-referral-dialog" class="remove-elem">
+    <div class="header-cont">
+        <button class="close-btn" onclick="startSetUserReferral(false)">
+            <svg class="close-icon">
+                <use xlink:href="#close-icon"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="content-cont">
+        <div class="message">
+            Enter the referral ID of the person that invited you into the platform.
+        </div>
+        <div class="address-input-cont">
+            <input id="referred-address-input" type="text" name="referred-address" placeholder="User referral ID" />
+            <div class="user-referral-icon-cont">
+                <svg class="user-referral-icon">
+                    <use xlink:href="#user-referral-icon"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="button-cont">
+        <button class="cancel-btn" onclick="startSetUserReferral(false)">Not Invited</button>
+        <button class="confirm-btn" onclick="startSetUserReferral(true)">Ok</button>
+    </div>
+</div>
+<div id="stake-confirm-dialog" class="remove-elem">
+    <div class="header-cont">
+        <button class="close-btn" onclick="cancelStake(this)">
+            <svg class="close-icon">
+                <use xlink:href="#close-icon"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="message-cont"></div>
+    <div class="button-cont">
+        <button class="confirm-btn" onclick="confirmStake(this)">Confirm</button>
+        <button class="cancel-btn" onclick="cancelStake(this)">Cancel</button>
+    </div>
+</div>
